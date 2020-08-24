@@ -4,6 +4,8 @@ Leon Kosarev
 
 Version: 16.08.20 
 
+Languages used: **C**, **C++**
+
 ## General Description: 
 
 In light of recent events, I’ve decided to build a program that will help manage information about the spread of a virus. The program will make use of the C++ standard template library (STL), data structures and other tools, in order to implement the needed functionality  under optimal complexity. 
