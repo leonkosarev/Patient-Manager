@@ -28,6 +28,8 @@ AddToRiskGroup(int patientID) - Indicate that an existing patient is in a risk g
 
 RiskGroupInTimeRange(Time start, Time end) - Prints the number of risk group patients, registered within a certain time range. - **O(logn)** 
 
+Quit - Frees the data and quits the application. - **O(1)** (amortized)
+
 ### Data Structures: 
 
 Directed graph - Implemented using adjacency lists. An edge (x,y) will exist in the graph if and only if patient y was infected by patient x. 
@@ -76,5 +78,23 @@ SumTree is a balanced BST. It's insertion and deletion algorithms are similar to
 - Value < int >
 - SubTreeSum < int >
 
+## Supported Commands
 
+The functions desribed above can be called using the following instruction formats:
+
+- Init -Patient name- -Patient age- -Registration time-
+
+- AddPatient -Spreader ID- -Patient Name- -Patient Age- -Registration Time-
+
+- AddToRiskGroup -Patient ID-
+
+- RiskGroupInRange -Start time- -End time-
+
+- PrintSuperSpreaders -Number of patients to print-
+
+- PrintAllInfectedBy -Patient ID-
+
+- PrintPatients
+
+- Quit
  
