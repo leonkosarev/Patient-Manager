@@ -6,6 +6,7 @@
 #include <stdexcept>
 #include <iostream>
 
+// Generic balanced binary search tree. A key may appear more than once.
 template <class T>
 class SumTree {
     int size = 0;
@@ -84,7 +85,7 @@ public:
     void insert(const T& key){
         SumTreeNode<T> * target = root ? root->find(key) : nullptr;
         if(target){
-            target->setValue(target->value+1);
+            target->setValue(target->value+1); // If the key already exists, increment it's quantity.
             return;
         }
         SumTreeNode<T>* node = nullptr;
@@ -108,7 +109,7 @@ public:
         if(!isEmpty()){
             SumTreeNode<T>* target = root->find(key);
             if(target) {
-                target->setValue(target->value - 1);
+                target->setValue(target->value - 1); // Decrement quantity. Remove if reaches zero.
                 if (target->value <= 0) {
                     root = target->remove();
                     --size;
