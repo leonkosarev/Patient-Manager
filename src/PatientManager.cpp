@@ -2,15 +2,39 @@
 
 using namespace std;
 
+// Helper function. Adds a new patient to the system. 
 void PatientManager::addNewPatient(const string& name, unsigned int age, Time registrationTime) {
     int newID = patients.size();
-    if (rankList.begin()->getRank()!=0){
-        rankList.push_front(InfectionRank(0));
+    if (rankList.begin()->getRank()!=0){        
+        rankList.push_front(InfectionRank(0)); // Creates zero InfectionRank if necessary.
     }
     auto zeroRank = rankList.begin();
     auto newRankNode = zeroRank->addPatient(newID);
     patients.emplace_back(newID, name,  age, registrationTime,  zeroRank, newRankNode);
 
+}
+
+// Helper function. Moves an existing patient up a rank.
+void PatientManager::movePatient(unsigned int patientID){
+    Patient& currentPatient = patients[patientID];
+    auto currentRank = currentPatient.getRank();
+    auto nextRank = next(currentRank);
+    if (nextRank==rankList.end() ||
+        (nextRank!=rankList.end() && nextRank->getRank()!=currentRank->getRank()+1)){
+            nextRank = rankList.insert(nextRank, InfectionRank(currentRank->getRank()+1));
+    }
+    currentPatient.setRank(nextRank);
+    if (currentRank->isEmpty()){
+        rankList.erase(currentRank);
+    }
+}
+
+// Helper function for printing a connected component in a directed graph.
+void recursivePrintList(vector<list<unsigned int>>& spreadGraph, vector<Patient>& patients, unsigned int patientID, ostream& os){
+    for(unsigned int & v : spreadGraph[patientID]){
+        os << patients[v];
+        recursivePrintList(spreadGraph, patients, v, os);
+    }
 }
 
 PatientManager::PatientManager(const string& zeroPatientName, unsigned int zeroPatientAge, Time registrationTime)
@@ -26,20 +50,6 @@ void PatientManager::print(std::ostream &os) const {
     }
 }
 
-void PatientManager::movePatient(unsigned int patientID){
-    Patient& currentPatient = patients[patientID];
-    auto currentRank = currentPatient.getRank();
-    auto nextRank = next(currentRank);
-    if (nextRank==rankList.end() ||
-        (nextRank!=rankList.end() && nextRank->getRank()!=currentRank->getRank()+1)){
-            nextRank = rankList.insert(nextRank, InfectionRank(currentRank->getRank()+1));
-    }
-    currentPatient.setRank(nextRank);
-    if (currentRank->isEmpty()){
-        rankList.erase(currentRank);
-    }
-}
-
 PMResult PatientManager::printSuperSpreaders(int k, ostream& os) {
     if(k<=0 || patients.size()<k){
         return INVALID_INPUT;
@@ -47,7 +57,7 @@ PMResult PatientManager::printSuperSpreaders(int k, ostream& os) {
     int count = 0;
     unsigned int* idArray;
     try{
-        idArray = new unsigned int[k];
+        idArray = new unsigned int[k]; // Store the ID numbers in an array in order to print the full info of the patients later.
     }catch (bad_alloc& ba){
         return ALLOCATION_ERROR;
     }
@@ -81,13 +91,6 @@ PMResult PatientManager::addPatient(unsigned int spreaderID, const string& name,
         return ALLOCATION_ERROR;
     }
     return SUCCESS;
-}
-
-void recursivePrintList(vector<list<unsigned int>>& spreadGraph, vector<Patient>& patients, unsigned int patientID, ostream& os){
-    for(unsigned int & v : spreadGraph[patientID]){
-        os << patients[v];
-        recursivePrintList(spreadGraph, patients, v, os);
-    }
 }
 
 PMResult PatientManager::printAllInfected(unsigned int patientID, ostream& os) {
