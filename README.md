@@ -16,17 +16,17 @@ The program will store patient information by assigning each patient with a uniq
 
 ### Current Functionality: 
 
-Init(string zeroPatientName, int zeroPatientAge, Time registrationTime) - Initializes a patient database containing information about the first known patient. - O(1) 
+Init(string zeroPatientName, int zeroPatientAge, Time registrationTime) - Initializes a patient database containing information about the first known patient. - **O(1)** 
 
-AddPatient(int spreaderID, string name, int age, Time registrationTime) - Adds a new patient to the system (infected by patient with ID number - spreaderID). -  O(1) (amortized) 
+AddPatient(int spreaderID, string name, int age, Time registrationTime) - Adds a new patient to the system (infected by patient with ID number - spreaderID). -  **O(1)** (amortized) 
 
-PrintSuperSpreaders(int K) - Prints the ID numbers of K patients with the highest infection count. - O(K) 
+PrintSuperSpreaders(int K) - Prints the ID numbers of K patients with the highest infection count. - **O(K)** 
 
-PrintInfectedBy(int patientID) - Prints the ID numbers of all K patients, directly of indirectly infected by patient with a given ID. - O(K) 
+PrintInfectedBy(int patientID) - Prints the ID numbers of all K patients, directly of indirectly infected by patient with a given ID. - **O(K)** 
 
-AddToRiskGroup(int patientID) - Indicate that an existing patient is in a risk group. - O(logn) 
+AddToRiskGroup(int patientID) - Indicate that an existing patient is in a risk group. - **O(logn)** 
 
-RiskGroupInTimeRange(Time start, Time end) - Prints the number of risk group patients, registered within a certain time range. - O(logn) 
+RiskGroupInTimeRange(Time start, Time end) - Prints the number of risk group patients, registered within a certain time range. - **O(logn)** 
 
 ### Implementation: 
 
