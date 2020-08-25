@@ -29,7 +29,7 @@ public:
 
     void print(std::ostream& os) const;
 
-    PMResult printSuperSpreaders(int k, std::ostream& os);
+    PMResult printSuperSpreaders(unsigned int k, std::ostream& os);
 
     PMResult printAllInfected(unsigned int patientID, std::ostream& os);
 
