@@ -38,7 +38,7 @@ Dynamic array – Contains the information of all patients in the system.
 
 SumTree – A balanced BST,  where each node contains an integer, indicating the quantity of the key representing the node.
 
-## Implemenation
+## Implementation
 
 ### Patient Manager:
 
