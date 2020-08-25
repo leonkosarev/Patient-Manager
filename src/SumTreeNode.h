@@ -34,7 +34,6 @@ class SumTreeNode {
     }
 
     static int getBalance(SumTreeNode * node){
-        SumTreeNode * s;
         return node ? node->getHeight(node->left) - node->getHeight(node->right) : 0;
     }
 
