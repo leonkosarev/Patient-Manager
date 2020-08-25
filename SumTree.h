@@ -107,11 +107,14 @@ public:
     void remove(const T& key){
         if(!isEmpty()){
             SumTreeNode<T>* target = root->find(key);
-            if(target){
-                root= target->remove();
-                --size;
-                if (root && root->parent){
-                    root=root->parent;
+            if(target) {
+                target->setValue(target->value - 1);
+                if (target->value <= 0) {
+                    root = target->remove();
+                    --size;
+                    if (root && root->parent) {
+                        root = root->parent;
+                    }
                 }
             }
         }
