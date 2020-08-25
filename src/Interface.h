@@ -16,7 +16,9 @@ typedef enum{
     PATIENT_NOT_FOUND = -5
 } PMResult;
 
-typedef long Time;
+typedef long Time; // Use simple representation until a more sophisticated time class is implemented.
+    
+// Wrapper functions for user interface:    
 
 void *Init(const std::string& zeroPatientName , unsigned int zeroPatientAge, Time regTime);
 
