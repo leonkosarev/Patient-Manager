@@ -25,7 +25,7 @@ void InfectionRank::getTopK(int k, int *count, unsigned int* idArray) {
         if (*count>=k){
             break;
         }
-        idArray[*count] = v;
-        ++(*count);
+        idArray[*count] = v; // Inserts the ID's into the array until count reaches k.
+        ++(*count);             
     }
 }
