@@ -64,11 +64,11 @@ PMResult PatientManager::printSuperSpreaders(unsigned int k, ostream& os) {
     os << "The top " << k << " spreaders are:" << endl;
     for (auto v = rankList.rbegin(); v!= rankList.rend(); ++v) {
         v->getTopK(k, &count, idArray);
-        if (count>=k){
+        if (count>= (int)k){
             break;
         }
     }
-    for(int i=0 ; i<k; ++i){
+    for(int i=0 ; i < (int)k; ++i){
         os << patients[idArray[i]];
     }
     delete idArray;
@@ -121,5 +121,4 @@ PMResult PatientManager::riskGroupInTimeRange(Time start, Time end , ostream& os
                     << riskGroupByTime.countInRange(start, end) << endl;
     return SUCCESS;
 }
-
 
