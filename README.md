@@ -28,10 +28,6 @@ AddToRiskGroup(int patientID) - Indicate that an existing patient is in a risk g
 
 RiskGroupInTimeRange(Time start, Time end) - Prints the number of risk group patients, registered within a certain time range. - **O(logn)** 
 
-### Implementation: 
-
-The following section will contain a general summary of the implementation, as well as the data structures used to maintain the complexities mentioned above. 
-
 ### Data Structures: 
 
 Directed graph, implemented using adjacency lists. An edge (x,y) will exist in the graph if and only if patient y was infected by patient x. 
@@ -40,6 +36,15 @@ Rank List – A list, where each node represents a group of patients with the sa
 
 Dynamic array – Contains the information of all patients in the system. 
 
-SumTree – A balanced BST,  where each node contains an integer, indicating the quantity of the key representing the node. 
+SumTree – A balanced BST,  where each node contains an integer, indicating the quantity of the key representing the node.
+
+## Implemenation
+
+### Patient Manager:
+    **Members:**
+    * Patients - Vector<Patient>
+    * RankList - List<InfectionRank>
+    * SpreadGraph - List<List<unsigned int> >
+    * RiskGroupByTime - SumTree<Time>
 
  
