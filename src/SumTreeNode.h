@@ -13,8 +13,8 @@ class SumTreeNode {
     SumTreeNode * right = nullptr;
     SumTreeNode * parent = nullptr;
     T * key;
-    int value = 1;
-    int subtreeSum;
+    int value = 1; // Represents the quantity of the key.
+    int subtreeSum; // Sum of all quantities in the subtree. Used for efficient countInRange.
 
     explicit SumTreeNode(const T& key, SumTreeNode * parent = nullptr, int sum = 1)
     : key(new T(key)), parent(parent), subtreeSum(sum) {}
@@ -59,7 +59,9 @@ class SumTreeNode {
             other->parent=this;
         }
     }
-
+    
+    // LL, RR , RL , LR - Similar to an AVL tree.
+    
     void LL(){
         SumTreeNode* curr = this;
         SumTreeNode* par = parent;
@@ -237,7 +239,8 @@ class SumTreeNode {
             next->fixUpwards();
         }
     }
-
+    
+    // Find the minimum node in the subtree.
     SumTreeNode* findMin(){
         SumTreeNode<T>* target = this;
         while (target){
@@ -280,8 +283,9 @@ class SumTreeNode {
     SumTreeNode* findRoot(){
         return parent ? parent->findRoot() : this;
     }
-
-    int countLessThan(const T& val){
+    
+    // Returns the total quantity of keys less than val.
+    int countLessThan(const T& val){ 
         SumTreeNode* current = this;
         int sum = 0;
         while (current){
@@ -300,8 +304,9 @@ class SumTreeNode {
         }
         return sum;
     }
-
-    SumTreeNode* nextInOrder(){
+    
+    // Find the next node in order
+    SumTreeNode* nextInOrder(){ 
         SumTreeNode* target = this;
         if(right){
             target = right;
