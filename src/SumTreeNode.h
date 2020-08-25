@@ -17,7 +17,7 @@ class SumTreeNode {
     int subtreeSum; // Sum of all quantities in the subtree. Used for efficient countInRange.
 
     explicit SumTreeNode(const T& key, SumTreeNode * parent = nullptr, int sum = 1)
-    : key(new T(key)), parent(parent), subtreeSum(sum) {}
+    : parent(parent), key(new T(key)) , subtreeSum(sum) {}
 
     ~SumTreeNode(){
         if (left){
