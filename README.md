@@ -30,9 +30,9 @@ RiskGroupInTimeRange(Time start, Time end) - Prints the number of risk group pat
 
 ### Data Structures: 
 
-Directed graph, implemented using adjacency lists. An edge (x,y) will exist in the graph if and only if patient y was infected by patient x. 
+Directed graph - Implemented using adjacency lists. An edge (x,y) will exist in the graph if and only if patient y was infected by patient x. 
 
-Rank List – A list, where each node represents a group of patients with the same infection count and contains a list of ID numbers of those patients. 
+Rank List – A list, where each node ("RankNode") represents a group of patients with the same infection count and contains a list ("PatientList") of ID numbers of those patients. 
 
 Dynamic array – Contains the information of all patients in the system. 
 
@@ -41,10 +41,25 @@ SumTree – A balanced BST,  where each node contains an integer, indicating the
 ## Implemenation
 
 ### Patient Manager:
-**Members:**
-- Patients - Vector<Patient>
-- RankList - List<InfectionRank>
-- SpreadGraph - List<List<unsigned int> >
-- RiskGroupByTime - SumTree<Time>
+
+- Patients - Dynamic array < Patient >
+- RankList - List < InfectionRank >
+- SpreadGraph - List < List < int > >
+- RiskGroupByTime - SumTree < Time > - BST sorted by Time
+
+### Patient:
+
+- ID < int >
+- Name < String >
+- Age < int >
+- Rank < InfectionRank& > - Points to the "RankNode"
+- SpotByRank - Node < int >& - Points to the relevant node in "PatientList"
+- RegistrationTime < Time >
+
+### InfectionRank:
+
+- Rank < int >
+- PatientList - List < int >
+
 
  
