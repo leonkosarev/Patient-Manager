@@ -41,10 +41,10 @@ SumTree – A balanced BST,  where each node contains an integer, indicating the
 ## Implemenation
 
 ### Patient Manager:
-    **Members:**
-    * Patients - Vector<Patient>
-    * RankList - List<InfectionRank>
-    * SpreadGraph - List<List<unsigned int> >
-    * RiskGroupByTime - SumTree<Time>
+**Members:**
+- Patients - Vector<Patient>
+- RankList - List<InfectionRank>
+- SpreadGraph - List<List<unsigned int> >
+- RiskGroupByTime - SumTree<Time>
 
  
