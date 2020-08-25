@@ -26,7 +26,7 @@ PMResult PrintPatients(void* PM){
     return SUCCESS;
 }
 
-PMResult PrintSuperSpreaders(void* PM, int k){
+PMResult PrintSuperSpreaders(void* PM, unsigned int k){
     return ((PatientManager*)PM)->printSuperSpreaders(k, cout);
 }
 
