@@ -1,7 +1,5 @@
 #include "PatientManager.h"
 
-#include <utility>
-
 using namespace std;
 
 void PatientManager::addNewPatient(const string& name, unsigned int age, Time registrationTime) {
