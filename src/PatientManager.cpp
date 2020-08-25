@@ -50,7 +50,7 @@ void PatientManager::print(std::ostream &os) const {
     }
 }
 
-PMResult PatientManager::printSuperSpreaders(int k, ostream& os) {
+PMResult PatientManager::printSuperSpreaders(unsigned int k, ostream& os) {
     if(k<=0 || patients.size()<k){
         return INVALID_INPUT;
     }
