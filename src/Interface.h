@@ -30,7 +30,7 @@ PMResult RiskGroupInTimeRange(void* PM, Time start, Time end);
 
 PMResult PrintPatients(void* PM);
 
-PMResult PrintSuperSpreaders(void* PM, int k);
+PMResult PrintSuperSpreaders(void* PM, unsigned int k);
 
 PMResult PrintAllInfectedBy(void* PM, unsigned int patientID);
 
