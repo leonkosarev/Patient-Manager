@@ -9,6 +9,8 @@
 #include "SumTree.h"
 #include <iostream>
 
+// Class for the main structure, with functionality as described in README file.
+
 class PatientManager {
     std::vector<Patient> patients;
     std::list<InfectionRank> rankList;
