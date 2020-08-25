@@ -6,6 +6,8 @@
 #include <iostream>
 #include "Interface.h"
 
+// Class for representing the patient's information.
+
 class Patient {
     unsigned int id;
     std::string name;
