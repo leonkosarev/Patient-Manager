@@ -183,7 +183,7 @@ static errorType OnInit(void** PM, const char* const command) {
     unsigned int zeroPatientAge;
     char tmp[MAX_BUFFER_SIZE];
     Time regTime;
-    ValidateRead(sscanf(command, "%s %d %ld", &tmp, &zeroPatientAge, &regTime), 3, "%s failed.\n", commandStr[INIT_CMD]);
+    ValidateRead(sscanf(command, "%s %d %ld", tmp, &zeroPatientAge, &regTime), 3, "%s failed.\n", commandStr[INIT_CMD]);
     std::string zeroPatientName = tmp;
 
     *PM = Init(zeroPatientName,zeroPatientAge,regTime);
@@ -201,7 +201,7 @@ static errorType OnAddPatient(void* PM, const char* const command){
     unsigned int age, sprederID;
     char tmp[MAX_BUFFER_SIZE];
     Time regTime;
-    ValidateRead(sscanf(command, "%d %s %d %ld",   &sprederID, &tmp, &age, &regTime), 4, "%s failed.\n", commandStr[ADDPATIENT_CMD]);
+    ValidateRead(sscanf(command, "%d %s %d %ld",   &sprederID, tmp, &age, &regTime), 4, "%s failed.\n", commandStr[ADDPATIENT_CMD]);
     std::string name = tmp;
 
     PMResult res = AddPatient(PM, sprederID, name, age, regTime);
