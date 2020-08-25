@@ -4,7 +4,7 @@ Leon Kosarev
 
 Version: 16.08.20 
 
-Languages used: **C**, **C++**
+Languages used: **C++**, **C**
 
 ## General Description: 
 
@@ -60,6 +60,21 @@ SumTree – A balanced BST,  where each node contains an integer, indicating the
 
 - Rank < int >
 - PatientList - List < int >
+
+### SumTree < T >:
+
+- Root < SumTreeNode < T > >
+- Size < int >
+
+SumTree is a balanced BST. It's insertion and deletion algorithms are similar to the AVL tree. A key may appear more than once. Each node represents a key and contains an integer value representing the quantity of the key in the structure. If the value reaches 0, the node is removed. In addition, each node contains the sum of all values in it's subtree. The additional information allows us to find the total quantity of keys in any range in **O(logn)**.
+
+### SumTreeNode < T >:
+
+- Height < int >
+- Left, Right, Parent < SumTreeNode < T >& >
+- Key < T& >
+- Value < int >
+- SubTreeSum < int >
 
 
  
