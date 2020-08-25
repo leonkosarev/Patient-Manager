@@ -94,8 +94,8 @@ PMResult PatientManager::addPatient(unsigned int spreaderID, const string& name,
 }
 
 PMResult PatientManager::printAllInfected(unsigned int patientID, ostream& os) {
-    if(patients.size()<patientID){
-        return INVALID_INPUT;
+    if(patients.size()<=patientID){
+        return PATIENT_NOT_FOUND;
     }
     os << "The people who were infected by patient " << patientID << " are:" << endl;
     recursivePrintList(spreadGraph, patients,  patientID, os);
