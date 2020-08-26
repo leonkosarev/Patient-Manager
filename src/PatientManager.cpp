@@ -71,7 +71,7 @@ PMResult PatientManager::printSuperSpreaders(unsigned int k, ostream& os) {
     for(int i=0 ; i < (int)k; ++i){
         os << patients[idArray[i]];
     }
-    delete idArray;
+    delete [] idArray;
     return SUCCESS;
 }
 
