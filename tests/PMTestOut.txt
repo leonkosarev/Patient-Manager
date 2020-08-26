@@ -1,0 +1,125 @@
+init done.
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: PATIENT_NOT_FOUND
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: SUCCESS
+AddPatient: PATIENT_NOT_FOUND
+AddPatient: INVALID_REGISTRATION_TIME
+AddPatient: SUCCESS
+AddPatient: PATIENT_NOT_FOUND
+ID: 0, Name: 1st, Age: 32, Infected: 6, Registration time: 0
+ID: 1, Name: 2nd, Age: 21, Infected: 10, Registration time: 4
+ID: 2, Name: 3rd, Age: 43, Infected: 2, Registration time: 5
+ID: 3, Name: 4th, Age: 23, Infected: 2, Registration time: 6
+ID: 4, Name: 5th, Age: 12, Infected: 6, Registration time: 8
+ID: 5, Name: 6th, Age: 21, Infected: 0, Registration time: 9
+ID: 6, Name: 7th, Age: 47, Infected: 0, Registration time: 13
+ID: 7, Name: 8th, Age: 63, Infected: 0, Registration time: 15
+ID: 8, Name: 10th, Age: 22, Infected: 1, Registration time: 32
+ID: 9, Name: 12th, Age: 15, Infected: 0, Registration time: 35
+ID: 10, Name: 13th, Age: 22, Infected: 0, Registration time: 36
+ID: 11, Name: 14th, Age: 43, Infected: 0, Registration time: 45
+ID: 12, Name: 16th, Age: 23, Infected: 0, Registration time: 54
+ID: 13, Name: 17th, Age: 14, Infected: 0, Registration time: 485
+ID: 14, Name: 19th, Age: 57, Infected: 0, Registration time: 567
+ID: 15, Name: 20th, Age: 63, Infected: 0, Registration time: 568
+ID: 16, Name: 22nd, Age: 27, Infected: 0, Registration time: 678
+ID: 17, Name: 23rd, Age: 51, Infected: 1, Registration time: 863
+ID: 18, Name: 24th, Age: 12, Infected: 0, Registration time: 965
+ID: 19, Name: 25th, Age: 21, Infected: 0, Registration time: 1543
+ID: 20, Name: 26th, Age: 43, Infected: 0, Registration time: 1567
+ID: 21, Name: 27th, Age: 23, Infected: 0, Registration time: 1786
+ID: 22, Name: 29th, Age: 21, Infected: 0, Registration time: 2555
+ID: 23, Name: 30th, Age: 47, Infected: 0, Registration time: 2765
+ID: 24, Name: 31st, Age: 63, Infected: 0, Registration time: 2799
+ID: 25, Name: 32nd, Age: 42, Infected: 1, Registration time: 3566
+ID: 26, Name: 40th, Age: 41, Infected: 0, Registration time: 3589
+ID: 27, Name: 41st, Age: 77, Infected: 0, Registration time: 3799
+ID: 28, Name: 42nd, Age: 68, Infected: 0, Registration time: 4253
+ID: 29, Name: 45th, Age: 8, Infected: 0, Registration time: 5000
+PrintPatients: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+AddToRiskGroup: SUCCESS
+The number of risk group patients registered from: 2 to 10 is 5
+RiskGroupInRange: SUCCESS
+The top 4 spreaders are:
+ID: 1, Name: 2nd, Age: 21, Infected: 10, Registration time: 4
+ID: 0, Name: 1st, Age: 32, Infected: 6, Registration time: 0
+ID: 4, Name: 5th, Age: 12, Infected: 6, Registration time: 8
+ID: 3, Name: 4th, Age: 23, Infected: 2, Registration time: 6
+PrintSuperSpreaders: SUCCESS
+The top 9 spreaders are:
+ID: 1, Name: 2nd, Age: 21, Infected: 10, Registration time: 4
+ID: 0, Name: 1st, Age: 32, Infected: 6, Registration time: 0
+ID: 4, Name: 5th, Age: 12, Infected: 6, Registration time: 8
+ID: 3, Name: 4th, Age: 23, Infected: 2, Registration time: 6
+ID: 2, Name: 3rd, Age: 43, Infected: 2, Registration time: 5
+ID: 25, Name: 32nd, Age: 42, Infected: 1, Registration time: 3566
+ID: 8, Name: 10th, Age: 22, Infected: 1, Registration time: 32
+ID: 17, Name: 23rd, Age: 51, Infected: 1, Registration time: 863
+ID: 29, Name: 45th, Age: 8, Infected: 0, Registration time: 5000
+PrintSuperSpreaders: SUCCESS
+The people who were infected by patient 2 are:
+ID: 4, Name: 5th, Age: 12, Infected: 6, Registration time: 8
+ID: 7, Name: 8th, Age: 63, Infected: 0, Registration time: 15
+ID: 8, Name: 10th, Age: 22, Infected: 1, Registration time: 32
+ID: 28, Name: 42nd, Age: 68, Infected: 0, Registration time: 4253
+ID: 15, Name: 20th, Age: 63, Infected: 0, Registration time: 568
+ID: 16, Name: 22nd, Age: 27, Infected: 0, Registration time: 678
+ID: 17, Name: 23rd, Age: 51, Infected: 1, Registration time: 863
+ID: 25, Name: 32nd, Age: 42, Infected: 1, Registration time: 3566
+ID: 29, Name: 45th, Age: 8, Infected: 0, Registration time: 5000
+ID: 24, Name: 31st, Age: 63, Infected: 0, Registration time: 2799
+ID: 13, Name: 17th, Age: 14, Infected: 0, Registration time: 485
+PrintAllInfectedBy: SUCCESS
+The people who were infected by patient 3 are:
+ID: 9, Name: 12th, Age: 15, Infected: 0, Registration time: 35
+ID: 18, Name: 24th, Age: 12, Infected: 0, Registration time: 965
+PrintAllInfectedBy: SUCCESS
+quit done.
