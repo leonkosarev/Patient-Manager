@@ -1,0 +1,64 @@
+Init 1st 32 0
+AddPatient 0 2nd 21 4
+AddPatient 1 3rd 43 5
+AddPatient 1 4th 23 6
+AddPatient 2 5th 12 8
+AddPatient 0 6th 21 9
+AddPatient 1 7th 47 13
+AddPatient 4 8th 63 15
+AddPatient 4 9th 42 12
+AddPatient 4 10th 22 32
+AddPatient 4 11th 11 22
+AddPatient 3 12th 15 35
+AddPatient 0 13th 22 36
+AddPatient 1 14th 43 45
+AddPatient 1 16th 23 54
+AddPatient 2 17th 14 485
+AddPatient 0 18th 41 432
+AddPatient 1 19th 57 567
+AddPatient 4 20th 63 568
+AddPatient 4 21st 77 432
+AddPatient 4 22nd 27 678
+AddPatient 4 23rd 51 863
+AddPatient 3 24th 12 965
+AddPatient 0 25th 21 1543
+AddPatient 1 26th 43 1567
+AddPatient 1 27th 23 1786
+AddPatient 2 28th 12 432
+AddPatient 0 29th 21 2555
+AddPatient 1 30th 47 2765
+AddPatient 4 31st 63 2799
+AddPatient 17 32nd 42 3566
+AddPatient 4 33rd 62 214
+AddPatient 67 34th 16 22
+AddPatient 3 35th 16 555
+AddPatient 0 36th 22 343
+AddPatient 54 37th 43 3567
+AddPatient 1 38th 73 545
+AddPatient 2 39th 67 485
+AddPatient 0 40th 41 3589
+AddPatient 1 41st 77 3799
+AddPatient 8 42nd 68 4253
+AddPatient 32 43rd 87 4566
+AddPatient 21 44th 88 3555
+AddPatient 25 45th 8 5000
+AddPatient 55 46th 82 5789
+PrintPatients
+AddToRiskGroup 1
+AddToRiskGroup 2
+AddToRiskGroup 3
+AddToRiskGroup 4
+AddToRiskGroup 5
+AddToRiskGroup 7
+AddToRiskGroup 19
+AddToRiskGroup 17
+AddToRiskGroup 15
+AddToRiskGroup 14
+AddToRiskGroup 12
+AddToRiskGroup 10
+RiskGroupInRange 2 10
+PrintSuperSpreaders 4
+PrintSuperSpreaders 9
+PrintAllInfectedBy 2
+PrintAllInfectedBy 3
+Quit
